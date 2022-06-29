@@ -58,7 +58,7 @@ function App() {
         sx={{
           height: 40,
           width: 200,
-          pr: 68
+          pr: 72
         }}
         alt="Naomi Kho"
         src={Name}/>
