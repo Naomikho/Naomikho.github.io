@@ -44,7 +44,7 @@ function App() {
                 component="img"
                 sx={{
                   height: 40,
-                  width: 200,
+                  width: 180,
                   pr: 72
                 }}
                 alt="Naomi Kho"
@@ -76,17 +76,16 @@ function App() {
           </Container>
         </AppBar>
 
-        Website is currently still a work in progress.
 
         <HashRouter basename={process.env.PUBLIC_URL}>
           <Switch>
-            <Route path="/" element={Home} exact />
-            <Route path="/About" element={Home} exact />
-            <Route path="/Games" element={Home} exact />
-            <Route path="/Software" element={Home} exact />
-            <Route path="/Art" element={Home} exact />
-            <Route path="/Writing" element={Home} exact />
-            <Route path="/Socials" element={Home} exact />
+            <Route path="/" element={Home} />
+            <Route path="/About" element={Home}/>
+            <Route path="/Games" element={Home} />
+            <Route path="/Software" element={Home} />
+            <Route path="/Art" element={Home} />
+            <Route path="/Writing" element={Home} />
+            <Route path="/Socials" element={Home} />
           </Switch>
         </HashRouter>
 
