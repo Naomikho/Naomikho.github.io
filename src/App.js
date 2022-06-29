@@ -75,8 +75,7 @@ function App() {
             </Toolbar>
           </Container>
         </AppBar>
-
-
+        
         <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={Home} exact/>
