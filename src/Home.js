@@ -7,7 +7,7 @@ function Home() {
                 <div class="middle">
                     <div class="inner">
                         <div className="textAlignCenter" centered>
-                            <h2>Hi, I'm Naomi, a developer and creator.</h2>
+                            <h1>Hi, I'm Naomi, a developer and creator.</h1>
                             <br></br>
                             <h5>You can find my works and portfolio under the works section.</h5>
                             <h5>You can find out more about me on my About page!</h5>
