@@ -5,7 +5,7 @@ import Home from "./Home";
 import BasicMenu from './WorksMenu';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { HashRouter, Route, Switch, Link, Layout } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Switch, Link} from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -77,8 +77,8 @@ function App() {
         </AppBar>
 
 
-        <HashRouter basename={process.env.PUBLIC_URL}>
-          <Switch>
+        <Router basename={process.env.PUBLIC_URL}>
+          <Routes>
             <Route path="/" element={Home} />
             <Route path="/About" element={Home}/>
             <Route path="/Games" element={Home} />
@@ -86,8 +86,8 @@ function App() {
             <Route path="/Art" element={Home} />
             <Route path="/Writing" element={Home} />
             <Route path="/Socials" element={Home} />
-          </Switch>
-        </HashRouter>
+          </Routes>
+        </Router>
 
       </ThemeProvider>
     </div>
