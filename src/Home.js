@@ -9,8 +9,8 @@ function Home() {
                         <div className="textAlignCenter" centered>
                             <h1>Hi, I'm Naomi, a developer and creator.</h1>
                             <br></br>
-                            <h5>You can find my works and portfolio under the works section.</h5>
-                            <h5>You can find out more about me on my About page!</h5>
+                            <h4>You can find my works and portfolio under the works section.</h4>
+                            <h4>You can find out more about me on my About page!</h4>
                         </div>
                     </div>
                 </div>
