@@ -12,6 +12,12 @@ html, body {
   margin: 0;
 }
 
+.appBody {
+  background-color: rgba(255, 255, 255, 0.734);
+  height: 100%;
+  margin: 0;
+}
+
 .outer {
   display: table;
   position: absolute;

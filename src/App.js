@@ -75,7 +75,8 @@ function App() {
             </Toolbar>
           </Container>
         </AppBar>
-        
+
+        <div className = "appBody">
         <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={Home} exact/>
@@ -88,6 +89,8 @@ function App() {
             <Route path="/Socials" element={Home} />
           </Routes>
         </Router>
+        </div>
+
 
       </ThemeProvider>
     </div>
