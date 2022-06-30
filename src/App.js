@@ -25,15 +25,7 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={darkTheme}>
-        <div>
-         <MediaQuery maxwidth={1224}>
-            <MobileAppDrawer/>
-         </MediaQuery>
-         
-         <MediaQuery minwidth={1224}>
-            <DesktopAppBar/>
-         </MediaQuery>
-         </div>
+        <DesktopAppBar/>
 
         <div className = "appBody">
         <Router basename={process.env.PUBLIC_URL}>

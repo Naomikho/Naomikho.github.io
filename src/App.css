@@ -2,15 +2,69 @@
   text-align: center;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size: 1.4em;
+  }
+  h4{
+    font-size: 0.8em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  h1{
+    font-size: 1.5em;
+  }
+  h4{
+    font-size: 0.9em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  h1{
+    font-size: 1.8em;
+  }
+  h4{
+    font-size: 1em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  h1{
+    font-size: 2em;
+  }
+  h4{
+    font-size: 1em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  h1{
+    font-size: 2em;
+  }
+
+  h4{
+    font-size: 1em;
+  }
+}
+
+.appbarGap{
+  width: 85vw;
+}
+
 #root {
   height: 100%;
   width: 100%;
   margin: 0;
 }
 
-.appbarPadding {
-  padding-left: 5% !important;
-  padding-right: 5% !important;
+.textWhite {
+  color: white !important;
 }
 
 html, body {
