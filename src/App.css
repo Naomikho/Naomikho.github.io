@@ -4,7 +4,13 @@
 
 #root {
   height: 100%;
+  width: 100%;
   margin: 0;
+}
+
+.appbarPadding {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
 }
 
 html, body {

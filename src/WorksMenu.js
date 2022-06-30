@@ -21,7 +21,7 @@ export default function BasicMenu() {
             <Button
                 key={"Works"}
                 onClick={handleClick}
-                sx={{ my: 2, color: 'white', display: 'block', px: 8 }}
+                sx={{ my: 2, color: 'white', display: 'block', px: 4}}
             >Works
             </Button>
             <Menu
