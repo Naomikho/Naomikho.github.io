@@ -96,7 +96,7 @@ const list = (anchor) => (
     return (
         <div>
         <Box sx={{ flexGrow: 0 }}>
-        <AppBar position="sticky">
+        <AppBar>
             <Toolbar>
                     <Typography variant="h6" color="inherit" component="div">
                         NaomiKho

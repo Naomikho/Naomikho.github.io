@@ -7,8 +7,14 @@
   h1{
     font-size: 1.4em;
   }
+  h2{
+    font-size: 1.1em;
+  }
   h4{
     font-size: 0.8em;
+  }
+  span{
+    font-size: 0.9em !important;
   }
 }
 
@@ -17,8 +23,15 @@
   h1{
     font-size: 1.5em;
   }
+  h2{
+    font-size: 1.2em;
+  }
   h4{
     font-size: 0.9em;
+  }
+
+  span{
+    font-size: 0.9em !important;
   }
 }
 
@@ -27,8 +40,15 @@
   h1{
     font-size: 1.8em;
   }
+  h2{
+    font-size: 1.5em;
+  }
   h4{
     font-size: 1em;
+  }
+
+  span{
+    font-size: 1em !important;
   }
 }
 
@@ -37,8 +57,17 @@
   h1{
     font-size: 2em;
   }
+
+  h2{
+    font-size: 1.7em;
+  }
+
   h4{
     font-size: 1em;
+  }
+
+  span{
+    font-size: 1.2em !important;
   }
 }
 
@@ -50,6 +79,10 @@
 
   h4{
     font-size: 1em;
+  }
+
+  span{
+    font-size: 1.2em !important;
   }
 }
 
@@ -98,6 +131,26 @@ html, body {
   /* Whatever width you want */
 }
 
+.column {
+  float: left;
+  width: 50%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.socialLinkButton {
+  margin: auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -130,6 +183,25 @@ html, body {
 
 .App-link {
   color: #61dafb;
+}
+
+.smallIcon{
+  height: 2em;
+  transform: translateY(1vh);
+}
+
+element {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
+
+element::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 @keyframes App-logo-spin {
