@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from "./Home";
+import Socials from './Socials';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter as Router, Route, Routes, Switch, Link} from 'react-router-dom';
@@ -37,7 +38,7 @@ function App() {
             <Route path="/Software" element={Home} />
             <Route path="/Art" element={Home} />
             <Route path="/Writing" element={Home} />
-            <Route path="/Socials" element={Home} />
+            <Route path="/Socials" element={Socials} />
           </Routes>
         </Router>
         </div>

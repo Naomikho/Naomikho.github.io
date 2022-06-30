@@ -75,7 +75,7 @@ const list = (anchor) => (
         <Divider />
         <List>
           <ListItem key = {'Works'} disablePadding>
-                <ListItemText>Works</ListItemText>
+                <ListItemText> &nbsp; WORKS</ListItemText>
           </ListItem>
             {['Games', 'Software', 'Blogs'].map((text, index) => (
                 <ListItem key={text} disablePadding>

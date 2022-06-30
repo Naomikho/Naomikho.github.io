@@ -4,31 +4,39 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: '#fff',
-  }));
+import SocialCard from './SocialCard';
   
-  export default function Socials() {
+const Socials = () => {
     return (
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
-          <Grid item xs={8}>
-            <Item>xs=8</Item>
+          <Grid item xs={5}>
+            Contact
           </Grid>
-          <Grid item xs={4}>
-            <Item>xs=4</Item>
+          <Grid item xs={5}>
+            Socials
           </Grid>
-          <Grid item xs={4}>
-            <Item>xs=4</Item>
+          <Grid item xs={5}>
+            <SocialCard title = {'email'} handle = {'khoyining9@gmail.com'} hasLink = {false}/>
           </Grid>
-          <Grid item xs={8}>
-            <Item>xs=8</Item>
+          <Grid item xs={5}>
+             <SocialCard title = {'LinkedIn'} handle = {'Kho Yi Ning'} hasLink = {true} url = {'https://www.linkedin.com/in/naomikho/'}/>
+          </Grid>
+          <Grid item xs={5}>
+            <SocialCard title = {'Discord'} handle = {'Naomi Kho Yining#6640'} hasLink = {false}/>
+          </Grid>
+          <Grid item xs={5}>
+             <SocialCard title = {'Github'} handle = {'Naomikho'} hasLink = {true} url = {'https://github.com/Naomikho'}/>
+          </Grid>
+          <Grid item xs={5}>
+
+          </Grid>
+          <Grid item xs={5}>
+             <SocialCard title = {'LinkTree'} handle = {'Naomi Kho Yi Ning'} hasLink = {true} url = {'https://linktr.ee/naomikho'}/>
           </Grid>
         </Grid>
       </Box>
     );
   }
+
+export default Socials();
