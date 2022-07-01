@@ -21,7 +21,7 @@ const Socials = () => {
                 </div>
 
                 <div class="column">
-                  Socials
+                  Follow
                   <SocialCard title={'LinkedIn'} handle={'Kho Yi Ning'} hasLink={true} url={'https://www.linkedin.com/in/naomikho/'} imageName = 'linkedin'/>
                   <SocialCard title={'Github'} handle={'Naomikho'} hasLink={true} url={'https://github.com/Naomikho'} imageName = 'github'/>
                   <SocialCard title={'LinkTree'} handle={'Naomi Kho Yi Ning'} hasLink={true} url={'https://linktr.ee/naomikho'} imageName = 'linktree'/>
