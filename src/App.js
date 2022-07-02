@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from "./Home";
+import About from "./About";
 import Socials from './Socials';
+import Games from './Games';
+import Writing from './Writing';
+import Software from './Software';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter as Router, Route, Routes, Switch, Link} from 'react-router-dom';
@@ -10,7 +14,6 @@ import { useMediaQuery } from 'react-responsive';
 import MediaQuery from 'react-responsive';
 
 import DesktopAppBar from './DesktopAppBar';
-import MobileAppDrawer from './MobileAppDrawer';
 
 const darkTheme = createTheme({
   palette: {
@@ -33,11 +36,11 @@ function App() {
           <Routes>
             <Route path="/" element={Home} exact/>
             <Route path="" element={Home} exact/>
-            <Route path="/About" element={Home}/>
-            <Route path="/Games" element={Home} />
-            <Route path="/Software" element={Home} />
-            <Route path="/Art" element={Home} />
-            <Route path="/Writing" element={Home} />
+            <Route path="/About" element={About}/>
+            <Route path="/Games" element={Games} />
+            <Route path="/Software" element={Software} />
+            {/* <Route path="/Art" element={Home} /> */}
+            <Route path="/Writing" element={Writing} />
             <Route path="/Socials" element={Socials} />
           </Routes>
         </Router>

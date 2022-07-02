@@ -16,6 +16,14 @@
   span{
     font-size: 0.9em !important;
   }
+  .carouselText{
+    word-wrap: break-word;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    margin: auto;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -33,6 +41,14 @@
   span{
     font-size: 0.9em !important;
   }
+  .carouselText{
+    word-wrap: break-word;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    margin: auto;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -49,6 +65,14 @@
 
   span{
     font-size: 1em !important;
+  }
+  .carouselText{
+    word-wrap: break-word;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 30px;
+    margin: auto;
   }
 }
 
@@ -69,6 +93,14 @@
   span{
     font-size: 1.2em !important;
   }
+  .carouselText{
+    word-wrap: break-word;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 30px;
+    margin: auto;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -84,6 +116,14 @@
   span{
     font-size: 1.2em !important;
   }
+  .carouselText{
+    word-wrap: break-word;
+    text-align: center;
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-bottom: 30px;
+    margin: auto;
+  }
 }
 
 .appbarGap{
@@ -94,6 +134,20 @@
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+.responsiveDiv{
+  width: 80vw;
+  margin: auto;
+  min-height: 60vh;
+}
+
+.carouselItem{
+  margin: auto;
+  word-wrap: break-word;
+  min-height: 60vh;
+  text-align: center;
+  justify-content: center;
 }
 
 .textWhite {
@@ -144,6 +198,11 @@ html, body {
   margin: auto;
 }
 
+.avatar {
+  width: 260px;
+  height: 180px;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -183,6 +242,15 @@ html, body {
 
 .App-link {
   color: #61dafb;
+}
+
+.whiteText{
+  color: white;
+}
+
+.portfolioIcon{
+  height: 8em;
+  width: 9em;
 }
 
 .smallIcon{
