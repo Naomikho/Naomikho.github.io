@@ -85,7 +85,7 @@ const list = (anchor) => (
                             {index == 1 && <TerminalIcon/>}
                             {index == 2 && <CreateIcon/>}
                         </ListItemIcon>
-                        <Button className = "textWhite" onClick = {() => openURL(worksList[index])}>{text}</Button>
+                        <Button className = "textWhite menuButton" onClick = {() => openURL(worksList[index])}>{text}</Button>
                     </ListItemButton>
                 </ListItem>
             ))}
@@ -102,7 +102,7 @@ const list = (anchor) => (
                         NaomiKho
                     </Typography>
                 <div className = "appbarGap"></div>
-                <Button className = "textWhite" onClick = {toggleDrawer('right', true)}><MenuIcon /></Button>
+                <Button className = "textWhite menuButton" onClick = {toggleDrawer('right', true)}><MenuIcon /></Button>
             </Toolbar>
         </AppBar>
         </Box>

@@ -253,6 +253,11 @@ html, body {
   width: 9em;
 }
 
+.menuButton{
+  padding-left: 10%;
+  padding-right: 50%;
+}
+
 .smallIcon{
   height: 2em;
   transform: translateY(1vh);
