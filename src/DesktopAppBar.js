@@ -61,13 +61,13 @@ const list = (anchor) => (
         <List>
             {['Home', 'About', 'Socials'].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                    <ListItemButton>
+                    <ListItemButton onClick = {() => openURL(menuList[index])}>
                         <ListItemIcon>
                             {index == 0 && <HomeIcon/>}
                             {index == 1 && <PersonIcon/>}
                             {index == 2 && <MailIcon/>}
                         </ListItemIcon>
-                        <Button className = "textWhite menuButton" onClick = {() => openURL(menuList[index])}>{text}</Button>
+                        <Button className = "textWhite">{text}</Button>
                     </ListItemButton>
                 </ListItem>
             ))}
@@ -79,13 +79,13 @@ const list = (anchor) => (
           </ListItem>
             {['Games', 'Software', 'Blogs'].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                    <ListItemButton>
+                    <ListItemButton onClick = {() => openURL(worksList[index])}>
                         <ListItemIcon>
                             {index == 0 && <VideogameAssetIcon/>}
                             {index == 1 && <TerminalIcon/>}
                             {index == 2 && <CreateIcon/>}
                         </ListItemIcon>
-                        <Button className = "textWhite menuButton" onClick = {() => openURL(worksList[index])}>{text}</Button>
+                        <Button className = "textWhite">{text}</Button>
                     </ListItemButton>
                 </ListItem>
             ))}
