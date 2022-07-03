@@ -27,7 +27,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import BasicMenu from './WorksMenu';
 import Name from './name.png';
 
-const menuList = ['/', '/About', '/Socials'];
+const menuList = ['/', '/About', '/Contact'];
 const worksList = ['/Games', '/Software', '/Writing'];
 
 const openURL = (url) => {
@@ -59,7 +59,7 @@ const list = (anchor) => (
         onKeyDown={toggleDrawer(anchor, false)}
     >
         <List>
-            {['Home', 'About', 'Socials'].map((text, index) => (
+            {['Home', 'About', 'Contact'].map((text, index) => (
                 <ListItem key={text} disablePadding>
                     <ListItemButton onClick = {() => openURL(menuList[index])}>
                         <ListItemIcon>

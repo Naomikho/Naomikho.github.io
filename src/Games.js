@@ -10,6 +10,7 @@ function Games(){
             <br></br>
             <br></br>
             <br></br>
+            <h2>Projects I Participated in</h2>
             <PortfolioCard iconName = "KanojoStories" title = 'Kanojo Stories' role = 'Main Porgrammer' tools = 'Unity' 
             link = 'https://twitter.com/choco_mame_jp'
             desc = 'Kanojo Stories is a mobile dating sim that is currently being developed by チョコマメ.'></PortfolioCard>

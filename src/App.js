@@ -41,7 +41,7 @@ function App() {
             <Route path="/Software" element={Software} />
             {/* <Route path="/Art" element={Home} /> */}
             <Route path="/Writing" element={Writing} />
-            <Route path="/Socials" element={Socials} />
+            <Route path="/Contact" element={Socials} />
           </Routes>
         </Router>
         </div>
