@@ -254,8 +254,8 @@ html, body {
 }
 
 .menuButton{
-  padding-left: 10%;
-  padding-right: 50%;
+  padding-left: 10% !important;
+  padding-right: 50% !important;
 }
 
 .smallIcon{
