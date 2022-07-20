@@ -248,6 +248,11 @@ html, body {
   color: white;
 }
 
+.photo{
+  width: 160px;
+  height: 150px;
+}
+
 .portfolioIcon{
   height: 8em;
   width: 9em;
