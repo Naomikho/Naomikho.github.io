@@ -6,6 +6,45 @@ import Grid from '@mui/material/Grid';
 
 import SocialCard from '../Components/SocialCard';
 
+const contacts = [
+  {
+    title : 'Email',
+    handle : 'khoyining9@gmail.com',
+    hasLink : false,
+    imageName: 'email'
+  },
+  {
+    title : 'Discord',
+    handle : 'Naomi Kho Yining#6640',
+    hasLink : false,
+    imageName: 'discord'
+  }
+];
+
+const socials = [
+  {
+    title: "LinkedIn",
+    handle: "Kho Yi Ning",
+    hasLink: true,
+    url: 'https://www.linkedin.com/in/naomikho/',
+    imageName: 'linkedin'
+  },
+  {
+    title: "Github",
+    handle: "Naomikho",
+    hasLink: true,
+    url: 'https://github.com/Naomikho',
+    imageName: 'linkedin'
+  },
+  {
+    title: "LinkTree",
+    handle: "Naomi Kho Yi Ning",
+    hasLink: true,
+    url: 'https://linktr.ee/naomikho',
+    imageName: 'linktree'
+  }
+];
+
 const Socials = () => {
     return (
         <div>
@@ -16,15 +55,12 @@ const Socials = () => {
             <div class="row">
                 <div class="column">
                   Contact 
-                  <SocialCard title={'Email'} handle={'khoyining9@gmail.com'} hasLink={false} imageName = 'email' />
-                  <SocialCard title={'Discord'} handle={'Naomi Kho Yining#6640'} hasLink={false} imageName = 'discord'/>
+                  {contacts.map(row => {return <SocialCard title = {row.title} handle = {row.handle} hasLink = {row.hasLink} imageName = {row.imageName}></SocialCard>})}
                 </div>
 
                 <div class="column">
                   Follow
-                  <SocialCard title={'LinkedIn'} handle={'Kho Yi Ning'} hasLink={true} url={'https://www.linkedin.com/in/naomikho/'} imageName = 'linkedin'/>
-                  <SocialCard title={'Github'} handle={'Naomikho'} hasLink={true} url={'https://github.com/Naomikho'} imageName = 'github'/>
-                  <SocialCard title={'LinkTree'} handle={'Naomi Kho Yi Ning'} hasLink={true} url={'https://linktr.ee/naomikho'} imageName = 'linktree'/>
+                  {socials.map(row => {return <SocialCard title = {row.title} handle = {row.handle} hasLink = {row.hasLink} url = {row.url} imageName = {row.imageName}></SocialCard>})}
                 </div>
             </div>
         </div>

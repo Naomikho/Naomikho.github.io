@@ -6,13 +6,6 @@ import Avatar from '../Assets/Avatar.png'
 
 function About(props)
 {
-    var items = [
-        {
-            name: "Test #1",
-            description: "Probably the most random thing you have ever seen!"
-        }
-    ]
-
     return (
         <div>
             <br></br><br></br><br></br><br></br>
@@ -21,16 +14,6 @@ function About(props)
             {Skills()}
         </Carousel>
         </div>
-    )
-}
-
-function Item(props)
-{
-    return (
-        <Paper className = "carouselItem">
-            <h2>{props.item.name}</h2>
-            <p>{props.item.description}</p>
-        </Paper>
     )
 }
 
@@ -71,14 +54,6 @@ function Skills(props)
         <p>{'Perform simple graphic design and editing using Photoshop or Clip Studio Paint.'}</p>
         </div>
     </Paper>
-    )
-}
-
-function IntroCard(props){
-    return(
-        <Paper>
-            
-        </Paper>
     )
 }
 

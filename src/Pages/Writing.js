@@ -2,6 +2,15 @@ import React, { useState } from 'react';
 
 import PortfolioCard from '../Components/PortfolioCard';
 
+const works = [
+    {iconName : "LinkedIn",
+     title : "Educational Blog",
+     role : "N/A",
+     tools : "N/A",
+     link : "https://www.linkedin.com/in/naomikho/recent-activity/shares/",
+     desc : 'I write and share things I have learnt on my dev journey.'},
+];
+
 function Writing(){
     return (
         <div className = "textAlignCenter">
@@ -10,9 +19,9 @@ function Writing(){
         <br></br>
         <br></br>
         <br></br>
-        <PortfolioCard iconName = "LinkedIn" title = 'Educational Blog' role = 'N/A' tools = 'N/A' 
-        link = 'https://www.linkedin.com/in/naomikho/recent-activity/shares/'
-        desc = 'I write about things that I have learnt on my dev journey.'></PortfolioCard>
+        {works.map(row => {return <PortfolioCard iconName = {row.iconName} title = {row.title}
+                                                     role = {row.role} tools = {row.tools}
+                                                     link = {row.link} desc = {row.desc}></PortfolioCard>})}
     </div>
     )
 }
