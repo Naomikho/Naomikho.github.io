@@ -8,8 +8,7 @@ const games = [
      role : "Main Programmer",
      tools : "Unity, C#",
      link : "https://twitter.com/choco_mame_jp",
-     desc : 'Kanojo Stories is a mobile dating sim that is currently being developed by チョコマメ.' +
-'As the programmer, I have created my own dialogue & choice import system as well as making the base game system.'},
+     desc : 'Kanojo Stories is a mobile dating sim that is currently being developed by チョコマメ.'},
 ];
 
 function Games(){
