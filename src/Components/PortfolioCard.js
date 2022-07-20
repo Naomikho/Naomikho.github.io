@@ -9,6 +9,8 @@ import KanojoStories from '../Assets/KanojoStories.png';
 import Scrapee from '../Assets/Scrapee.png';
 import LinkedIn from '../Assets/linkedin.png';
 
+import {openURL} from '../HelperFunc/openURL';
+
 const getIcon = (name) => {
     if (name == "KanojoStories") return KanojoStories;
     else if (name == "Scrapee") return Scrapee;
@@ -51,7 +53,7 @@ export default function PortfolioCard(props) {
             </Grid>
             <Grid item>
               <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                <a className = "whiteText" href = {props.link}>View Details</a>
+                <a className = "whiteText" onClick={() => openURL(props.link,true)}>View Details</a>
               </Typography>
             </Grid>
           </Grid>
