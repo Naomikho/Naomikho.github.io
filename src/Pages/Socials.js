@@ -34,7 +34,7 @@ const socials = [
     handle: "Naomikho",
     hasLink: true,
     url: 'https://github.com/Naomikho',
-    imageName: 'linkedin'
+    imageName: 'github'
   },
   {
     title: "LinkTree",
