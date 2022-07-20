@@ -62,7 +62,7 @@ const list = (anchor) => (
                             {index == 1 && <PersonIcon/>}
                             {index == 2 && <MailIcon/>}
                         </ListItemIcon>
-                        <Button className = "textWhite">{text}</Button>
+                        <ListItemText className = "textWhite">{text}</ListItemText>
                     </ListItemButton>
                 </ListItem>
             ))}
@@ -80,7 +80,7 @@ const list = (anchor) => (
                             {index == 1 && <TerminalIcon/>}
                             {index == 2 && <CreateIcon/>}
                         </ListItemIcon>
-                        <Button className = "textWhite">{text}</Button>
+                        <ListItemText className = "textWhite">{text}</ListItemText>
                     </ListItemButton>
                 </ListItem>
             ))}
