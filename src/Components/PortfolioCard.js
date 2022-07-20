@@ -5,9 +5,9 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 
-import KanojoStories from './KanojoStories.png';
-import Scrapee from './Scrapee.png';
-import LinkedIn from './linkedin.png';
+import KanojoStories from '../Assets/KanojoStories.png';
+import Scrapee from '../Assets/Scrapee.png';
+import LinkedIn from '../Assets/linkedin.png';
 
 const getIcon = (name) => {
     if (name == "KanojoStories") return KanojoStories;

@@ -21,10 +21,6 @@ const darkTheme = createTheme({
   },
 });
 
-const openURL = (url) => {
-  window.open(url, "_self");
-}
-
 function App() {
   return (
     <div className="App">

@@ -7,11 +7,12 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { renderMatches } from 'react-router-dom';
 
-import DiscordIcon from './discord.png';
-import GithubIcon from './github.png';
-import EmailIcon from './gmail.png';
-import LinkedinIcon from './linkedin.png';
-import LinktreeIcon from './linktree.png';
+import DiscordIcon from '../Assets/discord.png'
+import GithubIcon from '../Assets/github.png';
+import EmailIcon from '../Assets/gmail.png';
+import LinkedinIcon from '../Assets/linkedin.png';
+import LinktreeIcon from '../Assets/linktree.png';
+import { openURL } from '../HelperFunc/openURL';
 
 const fetchIcon = (iconName) =>{
     if (iconName == "discord") return DiscordIcon;
@@ -20,10 +21,6 @@ const fetchIcon = (iconName) =>{
     else if (iconName == "linkedin") return LinkedinIcon;
     else if (iconName == "linktree") return LinktreeIcon;
 }
-
-const openURL = (url) => {
-    window.open(url, "_blank"); //external links open in new window
-  }
 
 const SocialCard = (props) => {
 
@@ -40,12 +37,12 @@ const SocialCard = (props) => {
       </CardContent>
       {props.hasLink == true &&  
       <CardActions className = "socialLinkButton">
-        &nbsp;&nbsp;<Button size="small" onClick = {() => openURL(props.url)}>View</Button>
+        &nbsp;&nbsp;<Button size="small" onClick = {() => openURL(props.url, true)}>View</Button>
       </CardActions>}
       {
         props.hasLink == false &&  
         <CardActions className = "socialLinkButton">
-          &nbsp;&nbsp;<Button size="small" onClick = {() => openURL(props.url)} disabled></Button>
+          &nbsp;&nbsp;<Button size="small" onClick = {() => openURL(props.url, true)} disabled></Button>
         </CardActions>
       }
     </Card>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import PortfolioCard from './PortfolioCard';
+import PortfolioCard from './Components/PortfolioCard';
 
 function Writing(){
     return (

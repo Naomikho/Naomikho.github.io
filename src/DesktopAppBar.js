@@ -24,15 +24,10 @@ import CreateIcon from '@mui/icons-material/Create';
 import IconButton from '@mui/material/IconButton';
 import WorkIcon from '@mui/icons-material/Work';
 
-import BasicMenu from './WorksMenu';
-import Name from './name.png';
+import { openURL } from './HelperFunc/openURL';
 
 const menuList = ['/', '/About', '/Contact'];
 const worksList = ['/Games', '/Software', '/Writing'];
-
-const openURL = (url) => {
-    window.open(url, "_self");
-  }
 
 export default function DesktopAppBar(){
   const [state, setState] = React.useState({
@@ -61,7 +56,7 @@ const list = (anchor) => (
         <List>
             {['Home', 'About', 'Contact'].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                    <ListItemButton onClick = {() => openURL(menuList[index])}>
+                    <ListItemButton onClick = {() => openURL(menuList[index], false)}>
                         <ListItemIcon>
                             {index == 0 && <HomeIcon/>}
                             {index == 1 && <PersonIcon/>}
@@ -79,7 +74,7 @@ const list = (anchor) => (
           </ListItem>
             {['Games', 'Software', 'Blogs'].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                    <ListItemButton onClick = {() => openURL(worksList[index])}>
+                    <ListItemButton onClick = {() => openURL(worksList[index], false)}>
                         <ListItemIcon>
                             {index == 0 && <VideogameAssetIcon/>}
                             {index == 1 && <TerminalIcon/>}
