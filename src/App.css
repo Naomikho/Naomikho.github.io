@@ -160,13 +160,13 @@ html, body {
 }
 
 .appBody {
-  background-color: rgb(247, 224, 199);
+  background-color: rgb(246, 234, 220);
   height: 100vh;
   margin: 0;
 }
 
 .outer {
-  background-color: rgb(247, 224, 199);
+  background-color: rgb(246, 234, 220);
   display: table;
   position: absolute;
   top: 0;
