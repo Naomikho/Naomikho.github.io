@@ -27,9 +27,9 @@ function Intro(props)
             <h2>{'Naomi Kho Yi Ning'}</h2>
             <h4>{'Aspiring Game Developer & Creator'}</h4>
             <div className = "carouselText">
-            <p>{'I am a Computer Science graduate with great passion for creating software and games. As a developer, I design solutions for problems and write implementations using code.'}</p>
-            <p>{'I am currently the main programmer of a doujin circle named チョコマメ. We are currently developing a dating sim named Kanojo Stories; you can check out the details under the Works section! '}</p>
-            <p>{'I also do freelance work in my free time.'}</p>
+            <p>{'I am a Computer Science graduate with great passion in the CS/IT field. As a developer, I design solutions for problems and write implementations using code.'}</p>
+            <p>{'I love code and I aspire to become a web or software developer. :)'}</p>
+            <p>{'I strive to become a better version of myself every day.'}</p>
             </div>
         </Paper>
     )
