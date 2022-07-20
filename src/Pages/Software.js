@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import PortfolioCard from './Components/PortfolioCard';
+import PortfolioCard from '../Components/PortfolioCard';
 
 function Software(){
     return (

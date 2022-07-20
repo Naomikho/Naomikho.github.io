@@ -24,7 +24,7 @@ import CreateIcon from '@mui/icons-material/Create';
 import IconButton from '@mui/material/IconButton';
 import WorkIcon from '@mui/icons-material/Work';
 
-import { openURL } from './HelperFunc/openURL';
+import { openURL } from '../HelperFunc/openURL';
 
 const menuList = ['/', '/About', '/Contact'];
 const worksList = ['/Games', '/Software', '/Writing'];

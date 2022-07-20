@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-import SocialCard from './Components/SocialCard';
+import SocialCard from '../Components/SocialCard';
 
 const Socials = () => {
     return (
