@@ -22,7 +22,7 @@ function Intro(props)
     return (
         <Paper className = "carouselItem">
             <br></br>
-            <h1>About Me</h1>
+            <h1 className = "Inter">About Me</h1>
             <img className = "avatar" src = {Avatar}></img>
             <h2>{'Naomi Kho Yi Ning'}</h2>
             <h4>{'Aspiring Developer & Creator'}</h4>

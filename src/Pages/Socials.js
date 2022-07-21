@@ -51,7 +51,7 @@ const Socials = () => {
             <br></br>
             <br></br>
             <br></br>
-            <h2>Contact Me</h2>
+            <h2 className = "Inter">Contact Me</h2>
             <div class="row">
                 <div class="column">
                   Contact 

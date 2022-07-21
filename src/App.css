@@ -264,6 +264,14 @@ html, body {
   padding-right: 30px;
 }
 
+.fidWidth{
+  width: 100%;
+}
+
+.menuClose{
+  height: 0.5em !important;
+}
+
 .ulLink{
   text-decoration: none;
 }

@@ -11,7 +11,7 @@ const works = [
      desc : 'I write and share things I have learnt on my dev journey.'},
 ];
 
-function Writing(){
+function Blogs(){
     return (
         <div className = "textAlignCenter">
         <br></br>
@@ -26,4 +26,4 @@ function Writing(){
     )
 }
 
-export default Writing();
+export default Blogs();

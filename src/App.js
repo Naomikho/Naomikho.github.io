@@ -4,9 +4,9 @@ import './App.css';
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Socials from './Pages/Socials';
+import Blogs from './Pages/Blogs';
+import Softwares from './Pages/Softwares';
 import Games from './Pages/Games';
-import Writing from './Pages/Writing';
-import Software from './Pages/Software';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter as Router, Route, Routes, Switch, Link} from 'react-router-dom';
@@ -33,10 +33,10 @@ function App() {
             <Route path="/" element={Home} exact/>
             <Route path="" element={Home} exact/>
             <Route path="/About" element={About}/>
+            <Route path="/Software" element={Softwares} />
             <Route path="/Games" element={Games} />
-            <Route path="/Software" element={Software} />
             {/* <Route path="/Art" element={Home} /> */}
-            <Route path="/Writing" element={Writing} />
+            <Route path="/Blogs" element={Blogs} />
             <Route path="/Contact" element={Socials} />
           </Routes>
         </Router>

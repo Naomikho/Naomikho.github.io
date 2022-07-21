@@ -29,6 +29,7 @@ export default function PortfolioCard(props) {
           theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
       }}
     >
+      <hr></hr>
       <Grid container spacing={2}>
         <Grid item>
           <ButtonBase sx={{ width: 128, height: 128 }}>
@@ -38,7 +39,7 @@ export default function PortfolioCard(props) {
         <Grid item xs={12} sm container>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs>
-              <Typography gutterBottom variant="h4" component="div">
+              <Typography fontFamily={'Inter'} gutterBottom variant="h4" component="div">
                 {props.title}
               </Typography>
               <Typography variant="body2" gutterBottom>
@@ -64,6 +65,7 @@ export default function PortfolioCard(props) {
           </Grid>
         </Grid>
       </Grid>
+      <hr></hr>
     </Paper>
   );
 }
