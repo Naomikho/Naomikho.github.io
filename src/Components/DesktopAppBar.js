@@ -70,7 +70,7 @@ const list = (anchor) => (
         <Divider />
         <List>
           <ListItem key = {'Works'} disablePadding>
-                <ListItemText> &nbsp; WORKS</ListItemText>
+                <ListItemText> &nbsp; Works</ListItemText>
           </ListItem>
             {['Games', 'Software', 'Blogs'].map((text, index) => (
                 <ListItem key={text} disablePadding>
@@ -95,8 +95,8 @@ const list = (anchor) => (
             <Toolbar>
                     <Button className = "textWhite" onClick = {toggleDrawer('left', true)}><MenuIcon /></Button>
                     &nbsp;&nbsp;
-                    <Typography variant="h6" color="inherit" component="div">
-                        Naomi Kho Yi Ning
+                    <Typography fontFamily={'Livvic'} variant="h6" color="inherit" component="div">
+                        {"Naomi " + " " + "Kho " + " " + "Yi " + " " + "Ning"}
                     </Typography>
                     {/* <div className = "appbarGap"></div> */}
                 

@@ -26,6 +26,7 @@ const SocialCard = (props) => {
 
   return (
     <Card sx={{ minWidth: 5/6, maxWidth: 5/6, minHeight: 1/4, mx: 'auto', my: 4}}>
+      <hr></hr>
       <CardContent>
         {/*Add icon here later*/}
         <Typography sx={{ fontSize: 16 }} color="text.secondary" component = "div" gutterBottom>
@@ -34,17 +35,11 @@ const SocialCard = (props) => {
         <Typography sx = {{fontSize: 18}} variant="h6" component="span">
           {props.handle}
         </Typography>
+        <br></br>
+        {props.hasLink == true &&  <Button size="small" onClick = {() => openURL(props.url, true)}>View</Button>}
+        {props.hasLink == false &&  <Button size="small" onClick = {() => openURL(props.url, true)} disabled></Button>}
       </CardContent>
-      {props.hasLink == true &&  
-      <CardActions className = "socialLinkButton">
-        &nbsp;&nbsp;<Button size="small" onClick = {() => openURL(props.url, true)}>View</Button>
-      </CardActions>}
-      {
-        props.hasLink == false &&  
-        <CardActions className = "socialLinkButton">
-          &nbsp;&nbsp;<Button size="small" onClick = {() => openURL(props.url, true)} disabled></Button>
-        </CardActions>
-      }
+      <hr></hr>
     </Card>
   );
 }
