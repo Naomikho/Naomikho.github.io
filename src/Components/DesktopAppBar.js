@@ -96,7 +96,7 @@ const list = (anchor) => (
                     <Button className = "textWhite" onClick = {toggleDrawer('left', true)}><MenuIcon /></Button>
                     &nbsp;&nbsp;
                     <Typography variant="h6" color="inherit" component="div">
-                        NaomiKho
+                        Naomi Kho Yi Ning
                     </Typography>
                     {/* <div className = "appbarGap"></div> */}
                 
