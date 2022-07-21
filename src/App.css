@@ -10,6 +10,9 @@
   h2{
     font-size: 1.1em;
   }
+  h3{
+    font-size: 1.0em;
+  }
   h4{
     font-size: 0.8em;
   }
@@ -18,7 +21,7 @@
   }
   .carouselText{
     word-wrap: break-word;
-    text-align: center;
+    text-align: justify;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 30px;
@@ -33,6 +36,9 @@
   }
   h2{
     font-size: 1.2em;
+  }
+  h3{
+    font-size: 1.1em;
   }
   h4{
     font-size: 0.9em;
@@ -58,6 +64,9 @@
   }
   h2{
     font-size: 1.5em;
+  }
+  h3{
+    font-size: 1.3em;
   }
   h4{
     font-size: 1em;
@@ -86,6 +95,10 @@
     font-size: 1.7em;
   }
 
+  h3{
+    font-size: 1.3em;
+  }
+
   h4{
     font-size: 1em;
   }
@@ -107,6 +120,14 @@
 @media only screen and (min-width: 1200px) {
   h1{
     font-size: 2em;
+  }
+
+  h2{
+    font-size: 1.7em;
+  }
+
+  h3{
+    font-size: 1.3em;
   }
 
   h4{
@@ -223,6 +244,16 @@ html, body {
 
 .textAlignCenter{
   text-align: center;
+}
+
+.textAlignLeft{
+  text-align: left;
+}
+
+.textAlignJustify{
+  text-align: justify;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

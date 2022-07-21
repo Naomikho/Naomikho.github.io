@@ -93,20 +93,22 @@ const list = (anchor) => (
         <Box sx={{ flexGrow: 0 }}>
         <AppBar>
             <Toolbar>
+                    <Button className = "textWhite" onClick = {toggleDrawer('left', true)}><MenuIcon /></Button>
+                    &nbsp;&nbsp;
                     <Typography variant="h6" color="inherit" component="div">
                         NaomiKho
                     </Typography>
-                <div className = "appbarGap"></div>
-                <Button className = "textWhite" onClick = {toggleDrawer('right', true)}><MenuIcon /></Button>
+                    {/* <div className = "appbarGap"></div> */}
+                
             </Toolbar>
         </AppBar>
         </Box>
         <Drawer
-                anchor={'right'}
-                open={state['right']}
-                onClose={toggleDrawer('right', false)}
+                anchor={'left'}
+                open={state['left']}
+                onClose={toggleDrawer('left', false)}
             >
-                {list('right')}
+                {list('left')}
             </Drawer>
         </div>
     );
