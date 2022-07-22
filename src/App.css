@@ -35,6 +35,15 @@
     align-items: center;
     text-align: center;
   }
+  .paper{
+    background-color: #c3a378;
+    border-radius: 40px;
+    border: 1px black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -71,6 +80,15 @@
     align-items: center;
     text-align: center;
   }
+  .paper{
+    background-color: #c3a378;
+    border-radius: 40px;
+    border: 1px black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -106,6 +124,44 @@
     align-content: center;
     align-items: center;
     text-align: center;
+  }
+  .paper{
+    background-color: #c3a378;
+    border-radius: 40px;
+    border: 1px black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .css-ef8di9 {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    text-align: center;
+    flex: 0 0 auto;
+    padding: 8px;
+    border-radius: 50%;
+    overflow: visible;
+    margin: 0px 10px;
+    position: relative;
+    background-color: rgb(73, 73, 73);
+    color: white;
+    font-size: 30px;
+    transition: all 200ms ease 0s;
+    cursor: pointer;
+    opacity: 1 !important;
+    top: calc(50% - 20px) !important;
   }
 }
 
@@ -144,6 +200,45 @@
     align-content: center;
     align-items: center;
     text-align: center;
+    width: fit-content;
+  }
+  .paper{
+    background-color: #c3a378;
+    border-radius: 40px;
+    border: 1px black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .css-ef8di9 {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    text-align: center;
+    flex: 0 0 auto;
+    padding: 8px;
+    border-radius: 50%;
+    overflow: visible;
+    margin: 0px 10px;
+    position: relative;
+    background-color: rgb(73, 73, 73);
+    color: white;
+    font-size: 30px;
+    transition: all 200ms ease 0s;
+    cursor: pointer;
+    opacity: 1 !important;
+    top: calc(50% - 20px) !important;
   }
 }
 
@@ -182,6 +277,45 @@
     align-content: center;
     align-items: center;
     text-align: center;
+    width: fit-content;
+  }
+  .paper{
+    background-color: #c3a378;
+    border-radius: 40px;
+    border: 1px black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .css-ef8di9 {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    text-align: center;
+    flex: 0 0 auto;
+    padding: 8px;
+    border-radius: 50%;
+    overflow: visible;
+    margin: 0px 10px;
+    position: relative;
+    background-color: rgb(73, 73, 73);
+    color: white;
+    font-size: 30px;
+    transition: all 200ms ease 0s;
+    cursor: pointer;
+    opacity: 1 !important;
+    top: calc(50% - 20px) !important;
   }
 }
 
@@ -262,16 +396,6 @@ html, body {
   align-content: center;
   align-items: center;
   text-align: center;
-}
-
-.paper{
-  background-color: #c3a378;
-  border-radius: 40px;
-  border: 1px black;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .socialLinkButton {

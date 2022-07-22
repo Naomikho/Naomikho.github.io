@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
+import Tooltip from '@mui/material/Tooltip';
 
 import Avatar from '../Assets/Avatar.png'
 
@@ -9,7 +10,17 @@ function About(props)
     return (
         <div>
             <br></br><br></br><br></br><br></br>
-        <Carousel className = "responsiveDiv" autoPlay = {false}>
+        <Carousel className = "responsiveDiv" autoPlay = {false} navButtonsAlwaysVisible = {true}
+        navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
+            style: {
+                backgroundColor: 'white',
+                color: 'black',
+                opacity: "1 !important",
+                '&:hover': {
+                    opacity: "1 !important"
+                },
+            }
+        }} >
             {Intro()}
             {Skills()}
         </Carousel>
