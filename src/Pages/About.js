@@ -23,6 +23,7 @@ function About(props)
         }} >
             {Intro()}
             {Skills()}
+            {Skills2()}
         </Carousel>
         </div>
     )
@@ -31,7 +32,7 @@ function About(props)
 function Intro(props)
 {
     return (
-        <Paper className = "carouselItem">
+        <Paper className = "carouselItem" sx={{ minHeight: 8/10 }}>
             <br></br>
             <h1 className = "Inter">About Me</h1>
             <img className = "avatar" src = {Avatar}></img>
@@ -49,7 +50,7 @@ function Intro(props)
 function Skills(props)
 {
     return(
-        <Paper className = "carouselItem">
+        <Paper className = "carouselItem" sx={{ minHeight: 8/10 }}>
         <br></br>
         <h2>{'Skills and Experience'}</h2>
         <div className = "carouselText">
@@ -59,6 +60,20 @@ function Skills(props)
         <p>{'Construct game system and simple 2D minigames using Unity Game Engine.'}</p>
         <h4>Working with teams</h4>
         <p>{'Collaborate with project members in CI/CD environment using Github. Adopt agile development with Trello’s project management tools. Worked on final year employer project by involving clients in early development phases to obtain feedback for the next iteration.'}</p>
+        </div>
+    </Paper>
+    )
+}
+
+function Skills2(props)
+{
+    return(
+        <Paper className = "carouselItem" sx={{ minHeight: 8/10 }}>
+        <br></br>
+        <h2>{'Skills and Experience'}</h2>
+        <div className = "carouselText">
+        <h4>Software Development</h4>
+        <p>{'Worked on multiple software projects with my teammates during my Bachelor\'s degree. '}</p>
         <h4>UI/UX</h4>
         <p>{'Design user interface using user-centered design principles in Figma or Adobe XD. '}</p>
         <h4>Graphic Design</h4>
