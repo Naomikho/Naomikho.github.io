@@ -73,6 +73,11 @@
     opacity: 0 !important;
     top: calc(50% - 20px) !important;
   }
+
+  .counter{
+   max-width: 120px;
+   min-width: 90px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -147,6 +152,10 @@
     opacity: 0 !important;
     top: calc(50% - 20px) !important;
   }
+  .counter{
+    max-width: 120px;
+    min-width: 90px;
+   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -221,6 +230,10 @@
     opacity: 1 !important;
     top: calc(50% - 20px) !important;
   }
+  .counter{
+    max-width: 140px;
+    min-width: 110px;
+   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -298,6 +311,10 @@
     opacity: 1 !important;
     top: calc(50% - 20px) !important;
   }
+  .counter{
+    max-width: 180px;
+    min-width: 160px;
+   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -375,6 +392,10 @@
     opacity: 1 !important;
     top: calc(50% - 20px) !important;
   }
+  .counter{
+    max-width: 220px;
+    min-width: 190px;
+   }
 }
 
 .appbarGap{
@@ -403,6 +424,10 @@
 
 .textWhite {
   color: white !important;
+}
+
+.textBlack {
+  color: black !important;
 }
 
 html, body {
@@ -441,6 +466,15 @@ html, body {
 .column {
   float: left;
   width: 50%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.columnQuarter {
+  float: left;
+  width: 25%;
   justify-content: center;
   align-content: center;
   align-items: center;

@@ -7,6 +7,8 @@ import Socials from './Pages/Socials';
 import Blogs from './Pages/Blogs';
 import Softwares from './Pages/Softwares';
 import Games from './Pages/Games';
+import CounterView from './Pages/CounterView';
+import CustTicket from './Pages/CustTicket';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter as Router, Route, Routes, Switch, Link} from 'react-router-dom';
@@ -38,6 +40,8 @@ function App() {
             {/* <Route path="/Art" element={Home} /> */}
             <Route path="/Blogs" element={Blogs} />
             <Route path="/Contact" element={Socials} />
+            <Route path="/CounterView" element = {CounterView} />
+            <Route path="/CustTicket" element = {CustTicket} />
           </Routes>
         </Router>
         </div>
