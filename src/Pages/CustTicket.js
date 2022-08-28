@@ -27,8 +27,16 @@ class Ticket extends React.Component {
 
     // onMessage = (ev) => {
     //     let data = JSON.parse(ev.data);
-    //     let test = JSON.parse(data);
-    //     console.log(test);
+    //     let jsonBody = JSON.parse(data);
+            // this.setState(
+            //     {
+            //         queue: jsonBody.queue,
+            //         latestServingNo: jsonBody.latestServingNo,
+            //         lastIssuedNo: jsonBody.lastIssuedNo == "-001"?"Queue has not started":jsonBody.lastIssuedNo,
+            //         counter: jsonBody.counter,
+            //         counterStatus: jsonBody.counterStatus,
+            //     }
+            // );     
     // }
 
     //fetch data here
@@ -36,7 +44,7 @@ class Ticket extends React.Component {
     async componentDidMount() {
         this.fetchView();
         this.interval = setInterval(() => this.fetchView(), 60000);
-        // const ws = new WebSocket('ws://queue-ticketing-application.herokuapp.com/ws');
+        // const ws = new WebSocket('ws://127.0.0.1:8000/ws');
         
         // ws.onopen = () => {
         //     console.log('WebSocket Client Connected');
