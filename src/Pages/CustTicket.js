@@ -17,12 +17,13 @@ class Ticket extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            queue: sessionStorage.getItem("queue"),
-            latestServingNo: sessionStorage.getItem("latestServingNo"),
-            lastIssuedNo: sessionStorage.getItem("lastIssuedNo"),
-            counter: sessionStorage.getItem("counter"),
-            counterStatus: sessionStorage.getItem("counterStatus"),
+            queue: sessionStorage.getItem("queue")?sessionStorage.getItem("queue"):[],
+            latestServingNo: sessionStorage.getItem("latestServingNo")?sessionStorage.getItem("latestServingNo"):"Queue has not started",
+            lastIssuedNo: sessionStorage.getItem("lastIssuedNo")?sessionStorage.getItem("latestServingNo"):"Queue has not started",
+            counter: sessionStorage.getItem("counter")?sessionStorage.getItem("counter"):["","","",""],
+            counterStatus: sessionStorage.getItem("counterStatus")?sessionStorage.getItem("counterStatus"):[true,true,true,true],
         };
+        console.log(this.state);
     }
 
     // onMessage = (ev) => {
