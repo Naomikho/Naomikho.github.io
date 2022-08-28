@@ -10,6 +10,8 @@ import { red } from '@mui/material/colors';
 import { useState } from 'react';
 import Grid from '@mui/material/Grid';
 
+import {APIURL, getReq, postCounterReq} from '../HelperFunc/QueueTicketAPI';
+
 class Ticket extends React.Component {
     //declare states
     constructor(props) {

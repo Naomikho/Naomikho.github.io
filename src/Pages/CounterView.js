@@ -8,30 +8,55 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { red } from '@mui/material/colors';
 
+import {APIURL, getReq, postCounterReq} from '../HelperFunc/QueueTicketAPI';
+
 class Counter extends React.Component {
     //declare states
     constructor(props) {
         super(props);
-        this.state = { counterStatus: ["online", "online", "online", "online"] };
+        this.state = { counterStatus: [true, true, true, true] };
     }
 
     //fetch data here
+    async componentDidMount(){
+
+    }
 
     returnToggleMessage(status) {
-        if (status == "online") return "Go Offline"
+        if (status == true) return "Go Offline"
         else return "Go Online"
     }
 
-    toggleOnline(counterNo) {
-
+    async resetQueue(){
+        await getReq('clear');
     }
 
-    compCurr(counterNo) {
-
+    async toggleOnline(counterNo) {
+        var response = await postCounterReq('toggleOnline', counterNo);
+        if (response != null && response.includes("Counter") && response.includes("is now"))
+        {
+            this.setState(state => {
+                const counterStatus = state.counterStatus.map((item, index) => {
+                  if (index == (counterNo - 1)) {
+                    return !item;
+                  } else {
+                    return item;
+                  }
+                });
+          
+                return {
+                    counterStatus,
+                };
+              });
+        }
     }
 
-    callNext(counterNo) {
+    async compCurr(counterNo) {
+        await postCounterReq('compCurr', counterNo);
+    }
 
+    async callNext(counterNo) {
+        await postCounterReq('callNext', counterNo);
     }
 
     render() {
