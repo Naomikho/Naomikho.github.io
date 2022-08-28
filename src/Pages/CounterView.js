@@ -19,7 +19,7 @@ class Counter extends React.Component {
 
     //fetch data here
     async componentDidMount(){
-
+        
     }
 
     returnToggleMessage(status) {
@@ -28,7 +28,8 @@ class Counter extends React.Component {
     }
 
     async resetQueue(){
-        await getReq('clear');
+        var msg = await getReq('clear');
+        alert(msg);
     }
 
     async toggleOnline(counterNo) {
@@ -52,11 +53,13 @@ class Counter extends React.Component {
     }
 
     async compCurr(counterNo) {
-        await postCounterReq('compCurr', counterNo);
+        var msg = await postCounterReq('compCurr', counterNo);
+        alert(msg);
     }
 
     async callNext(counterNo) {
-        await postCounterReq('callNext', counterNo);
+        var msg = await postCounterReq('callNext', counterNo);
+        alert(msg);
     }
 
     render() {
@@ -64,9 +67,8 @@ class Counter extends React.Component {
             <div class = "textAlignCenter">
                 <br></br><br></br><br></br><br></br>
                 <h1>Counter Management</h1>
-                <br></br>
-                <Button sx={{ color: red[500] }}>Clear and Reset Queue</Button>
-                <br></br>
+                <Button sx={{ color: red[500] }} onClick = {() => {this.resetQueue()}}>Clear and Reset Queue</Button>
+                <br></br><br></br>
                 <Grid
                     container
                     spacing={2}

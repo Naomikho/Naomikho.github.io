@@ -17,10 +17,11 @@ class Ticket extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            latestServingNo: "Queue has not started",
-            lastIssuedNo: "Queue has not started",
-            counterStatus: ["online", "online", "online", "online"],
-            counter: ["", "", "", ""],
+            queue: sessionStorage.getItem("queue"),
+            latestServingNo: sessionStorage.getItem("latestServingNo"),
+            lastIssuedNo: sessionStorage.getItem("lastIssuedNo"),
+            counter: sessionStorage.getItem("counter"),
+            counterStatus: sessionStorage.getItem("counterStatus"),
         };
     }
 
@@ -33,7 +34,9 @@ class Ticket extends React.Component {
     //fetch data here
 
     async componentDidMount() {
-        // const ws = new WebSocket('wss://queue-ticketing-application.herokuapp.com/ws');
+        this.fetchView();
+        this.interval = setInterval(() => this.fetchView(), 60000);
+        // const ws = new WebSocket('ws://queue-ticketing-application.herokuapp.com/ws');
         
         // ws.onopen = () => {
         //     console.log('WebSocket Client Connected');
@@ -48,22 +51,60 @@ class Ticket extends React.Component {
         // };
     }
 
-    componentWillUnmount() {
+    async componentWillUnmount() {
+        sessionStorage.clear();
         // const { ws } = this.state;
         // ws.close();
     }
 
+    async fetchView(){
+        const jsonBody = await getReq('custView');
+        if (jsonBody != null)
+        {
+            this.setState(
+                {
+                    queue: jsonBody.queue,
+                    latestServingNo: jsonBody.latestServingNo,
+                    lastIssuedNo: jsonBody.lastIssuedNo == "-001"?"Queue has not started":jsonBody.lastIssuedNo,
+                    counter: jsonBody.counter,
+                    counterStatus: jsonBody.counterStatus,
+                }
+            );
+            sessionStorage.setItem("queue", jsonBody.queue);
+            sessionStorage.setItem("latestServingNo", jsonBody.latestServingNo);
+            sessionStorage.setItem("lastIssuedNo", jsonBody.lastIssuedNo == "-001"?"Queue has not started":jsonBody.lastIssuedNo);
+            sessionStorage.setItem("counter", jsonBody.counter);
+            sessionStorage.setItem("counterStatus", jsonBody.counterStatus);
+        }
+        else
+            console.log("custView JSON is null.");
+        console.log(jsonBody.counterServing);
+    }
+
+    async getTicket(){
+        var msg = await getReq('newTicket');
+        alert(msg);
+    }
 
     //for status, use circle icon then use color props
     //success = green, disabled = grey
     //red use sx={{ color: red[500] }}
     renderStatusColor(counterNo) {
-        if (this.state.counterStatus[counterNo - 1] == "online" && this.state.counter[counterNo - 1] != "")
+        if (this.state.counterStatus[counterNo - 1] && this.state.counter[counterNo - 1])
             return <CircleIcon sx={{ color: red[500] }}></CircleIcon>
-        else if (this.state.counterStatus[counterNo - 1] == "online" && this.state.counter[counterNo - 1] == "")
+        else if (this.state.counterStatus[counterNo - 1] && !this.state.counter[counterNo - 1])
             return <CircleIcon color="success"></CircleIcon>
         else
             return <CircleIcon color="disabled"></CircleIcon>
+    }
+
+    checkQueue(){
+        if (this.state.queue == null || this.state.queue.length == 0)
+        {
+            return "No tickets in the waiting queue";
+        }
+        else
+            return ""
     }
 
     render() {
@@ -83,19 +124,19 @@ class Ticket extends React.Component {
                     <Grid item xs={6}>
                         <Card sx={{ minWidth: 450, maxWidth: 450 }}>
                             <CardContent>
+                                <p>{this.checkQueue()}</p>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    {/*“No tickets in the waiting queue”*/}
                                     Now Serving: {this.state.latestServingNo}
                                 </Typography>
                                 <Typography gutterBottom variant="h5" component="div">
                                     Last Number: {this.state.lastIssuedNo}
                                 </Typography>
-                                <Button onClick={() => { }}>Take a Number</Button>
+                                <Button onClick={() => {this.getTicket()}}>Take a Number</Button>
                             </CardContent>
                         </Card>
                     </Grid>
                 </Grid>
-                <br></br>
+                <br></br><br></br>
                 <Grid
                     container
                     spacing={2}
@@ -111,37 +152,38 @@ class Ticket extends React.Component {
 
                     <Grid item xs={3} style={{justifyContent: "center", textAlign: "center"}}>
                     <Card className = "counter">
-                            <CardContent style={{ backgroundColor: this.state.counterStatus[0] == "online" ? "white" : "#d7dade" }}>
+                            <CardContent style={{ backgroundColor: this.state.counterStatus[0] ? "white" : "#aaabad" , minHeight: "150px"}}>
+                                {console.log(this.state)}
                                 {this.renderStatusColor(1)}
                                 <p class="textBlack">Counter 1</p>
-                                <p class="textBlack">{this.state.counter[0] != "" ? this.state.counter[0] : "Not serving"}</p>
+                                <p class="textBlack">{this.state.counter[0] ? this.state.counter[0] : "Not serving"}</p>
                             </CardContent>
                         </Card>
                     </Grid>
                     <Grid item xs={3} style={{justifyContent: "center", textAlign: "center"}}>
                     <Card className = "counter">
-                            <CardContent style={{ backgroundColor: this.state.counterStatus[1] == "online" ? "white" : "#d7dade" }}>
+                            <CardContent style={{ backgroundColor: this.state.counterStatus[1] ? "white" : "#aaabad", minHeight: "150px"}}>
                                 {this.renderStatusColor(2)}
                                 <p class="textBlack">Counter 2</p>
-                                <p class="textBlack">{this.state.counter[1] != "" ? this.state.counter[1] : "Not serving"}</p>
+                                <p class="textBlack">{this.state.counter[1] ? this.state.counter[1] : "Not serving"}</p>
                             </CardContent>
                         </Card>
                     </Grid>
                     <Grid item xs = {3} style={{justifyContent: "center", textAlign: "center"}}> 
                     <Card className = "counter">
-                            <CardContent style={{ backgroundColor: this.state.counterStatus[2] == "online" ? "white" : "#d7dade" }}>
+                            <CardContent style={{ backgroundColor: this.state.counterStatus[2] ? "white" : "#aaabad", minHeight: "150px" }}>
                                 {this.renderStatusColor(3)}
                                 <p class="textBlack">Counter 3</p>
-                                <p class="textBlack">{this.state.counter[2] != "" ? this.state.counter[2] : "Not serving"}</p>
+                                <p class="textBlack">{this.state.counter[2] ? this.state.counter[2] : "Not serving"}</p>
                             </CardContent>
                         </Card>
                     </Grid>
                     <Grid item xs = {3} style={{justifyContent: "center", textAlign: "center"}}>
                     <Card className = "counter">
-                            <CardContent style={{ backgroundColor: this.state.counterStatus[3] == "online" ? "white" : "#d7dade" }}>
+                            <CardContent style={{ backgroundColor: this.state.counterStatus[3] ? "white" : "#aaabad", minHeight: "150px" }}>
                                 {this.renderStatusColor(4)}
                                 <p class="textBlack">Counter 4</p>
-                                <p class="textBlack">{this.state.counter[3] != "" ? this.state.counter[3] : "Not serving"}</p>
+                                <p class="textBlack">{this.state.counter[3] ? this.state.counter[3] : "Not serving"}</p>
                             </CardContent>
                         </Card>
                     </Grid>
