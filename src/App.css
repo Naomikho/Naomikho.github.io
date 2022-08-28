@@ -233,6 +233,7 @@
   .counter{
     max-width: 140px;
     min-width: 110px;
+    transform: translateX(10%);
    }
 }
 
@@ -314,6 +315,7 @@
   .counter{
     max-width: 180px;
     min-width: 160px;
+    transform: translateX(20%);
    }
 }
 
@@ -395,6 +397,7 @@
   .counter{
     max-width: 220px;
     min-width: 190px;
+    transform: translateX(20%);
    }
 }
 

@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import { red } from '@mui/material/colors';
 
 class Counter extends React.Component {
     //declare states
@@ -35,9 +36,11 @@ class Counter extends React.Component {
 
     render() {
         return (
-            <div>
+            <div class = "textAlignCenter">
                 <br></br><br></br><br></br><br></br>
                 <h1>Counter Management</h1>
+                <br></br>
+                <Button sx={{ color: red[500] }}>Clear and Reset Queue</Button>
                 <br></br>
                 <Grid
                     container
