@@ -33,7 +33,7 @@ export default function PortfolioCard(props) {
       <Grid container spacing={2}>
         <Grid item>
           <ButtonBase sx={{ width: 128, height: 128 }}>
-            <img className = "portfolioIcon" alt={props.title} src= {getIcon(props.iconName)} />
+            {props.iconName && <img className = "portfolioIcon" alt={props.title} src= {getIcon(props.iconName)} />}
           </ButtonBase>
         </Grid>
         <Grid item xs={12} sm container>
