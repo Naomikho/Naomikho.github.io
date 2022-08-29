@@ -1,10 +1,13 @@
 const APIURL = "https://queue-ticketing-application.herokuapp.com/";
+// const localhost = "http://127.0.0.1:8000/";
+// const APIURL = localhost;
 const CORSProxy = "https://shrouded-waters-19257.herokuapp.com/";
+// const CORSProxy = "";
 
 async function getReq(url){
     const response = await fetch(CORSProxy + APIURL + url, 
     {
-      method: "GET"
+      method: "GET",
     })
     .then((response) => {
       if (response.status === 200 || response.status === 201 || response.status === 202) {
