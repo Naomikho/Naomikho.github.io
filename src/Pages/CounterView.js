@@ -14,7 +14,7 @@ class Counter extends React.Component {
     //declare states
     constructor(props) {
         super(props);
-        this.state = { counterStatus: [true, true, true, true] };
+        this.state = { counterStatus: [true, true, true, true]};
     }
 
     //fetch data here
@@ -34,6 +34,12 @@ class Counter extends React.Component {
 
     async toggleOnline(counterNo) {
         var response = await postCounterReq('toggleOnline', counterNo);
+        if (typeof response == "object")
+        {
+            if (typeof response == "object")
+                alert(response.detail);
+            return //i know this is an error if it returns object instead of the success message
+        }
         if (response != null && response.includes("Counter") && response.includes("is now"))
         {
             this.setState(state => {
@@ -54,11 +60,16 @@ class Counter extends React.Component {
 
     async compCurr(counterNo) {
         var msg = await postCounterReq('compCurr', counterNo);
+        if (typeof msg == "object")
+            msg = msg.detail;
+        console.log(msg);
         alert(msg);
     }
 
     async callNext(counterNo) {
         var msg = await postCounterReq('callNext', counterNo);
+        if (typeof msg == "object")
+            msg = msg.detail;
         alert(msg);
     }
 
